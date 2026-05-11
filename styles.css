@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-fundo: #FDF5F2;
+    --cor-card: #FFFFFF;
+    --cor-destaque: #FF5C40;
+    --cor-titulo: #2D344E;
+    --cor-corpo: #676E83;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--cor-fundo);
+    font-family: "Poppins", sans-serif;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    height: 8rem;
+    margin-bottom: 40px;
+}
+
+.inside-nav-bar {
+    width: 46rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-bar-buttons {
+    width: 130px;
+    height: 90px;
+    background-color: var(--cor-destaque);
+    border-radius: 17px;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all .3s ease;
+    box-shadow: 0 4px 6px rgba(255, 92, 64, 0.2);
+}
+
+.nav-bar-buttons:hover {
+    background-color: #E65339;
+}
+
+.nav-bar-buttons:active {
+    opacity: 0.6;
+}
+
+.title {
+    text-align: center;
+    color: var(--cor-titulo);
+    font-size: 2.89rem;
+}
+
+.main-menu {
+    height: 100%;
+    width: 100%;
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.input-search {
+    display: none;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    outline: none;
+}
+
+.input-search-camp {
+    width: 40%;
+    height: 100%;
+    background-color: #FFF;
+    border: 2px solid var(--cor-destaque);
+    border-radius: 12px;
+    color: #FFF;
+    padding: 10px;
+    outline: none;
+
+    font-size: 1rem;
+    font-weight: 500;
+    color: #000;
+    text-align: justify;
+}
+
+#magnifying-glass {
+    padding: 10px;
+    font-size: 25px;
+    color: var(--cor-destaque);
+}
+
+.inside-main-menu {
+    max-width: 65%;
+    max-height: 30%;
+    display: grid;
+    grid-template-columns: 230px 230px 230px;
+    justify-content: center;
+    gap: 30px;
+}
+
+.hamburguer-menu {
+    width: 14rem;
+    padding: 10px;
+    border: none;
+    background-color: var(--cor-card);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .4s ease;
+    list-style: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.hamburguer-menu:hover {
+    box-shadow: 0 8px 24px rgba(45, 52, 78, 0.08);
+    transform: translateY(-10px) scale(1.03);
+}
+
+.hamburguer-img {
+    width: 12rem;
+    height: 12rem;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.hamburguer-properties {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.hamburguer-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #2D344E;
+    text-align: justify;
+}
+
+.hamburguer-name-span {
+    color: #7822eb;
+}
+
+.hamburguer-price {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #676E83;
+}
+
+@media screen and (max-width: 1200px) {
+    .input-search-camp {
+        width: 80%;
+    }
+
+    .title {
+        font-size: 2.4rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .inside-main-menu {
+        grid-template-columns: 230px 230px;
+    }
+
+    .input-search {
+        padding: 0 30px;
+    }
+
+    .input-search-camp {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .nav-bar {
+        padding: 0;
+    }
+
+    .inside-nav-bar {
+        padding: 0 15px;
+        margin: 30px 0 30px;
+        width: 100%;
+    }
+
+    .nav-bar-buttons {
+        width: 92px;
+        height: 70px;
+        font-size: 1rem;
+        font-weight: 800;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .main-menu {
+        padding: 2rem 15px 0;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 100%;
+    }
+
+    .inside-main-menu {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .hamburguer-menu {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .hamburguer-img {
+        width: 7.5rem;
+        height: 6.5rem;
+    }
+
+    .hamburguer-name {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .hamburguer-price {
+        font-size: 20px;
+    }
+
+    .hamburguer-properties {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
